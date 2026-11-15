@@ -6,6 +6,8 @@
 #ifndef MATCHING_MATCHING_H
 #define MATCHING_MATCHING_H
 
+#include "puzzles.h"
+
 /*
  * The actual algorithm.
  * 
