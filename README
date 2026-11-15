@@ -1,3 +1,25 @@
+This repository is how I (Jonas Kölker) send code contributions to
+Simon Tatham.  To anyone other than Simon: this repository is not
+built for publication consumption, but you're welcome to peek behind
+the curtains.
+
+Here's how I branch:
+
+- The `main` branch tracks Simon's `main` branch.  (Generally I try to track
+  his branches but I've only ever seen `main`.)
+
+- The `my-github-default` branch exists to show this modified README.
+
+- Any branch named `cherries-*` contains individually useful changes
+  that are not connected to one another.  Randomly reordering the
+  commits on the branch should not break or confuse anything.
+
+- Anything else is probably a normal feature branch.
+
+Below the line is the README file as I found it.
+
+----------------------------------------------------------------------
+
 This is the README accompanying the source code to Simon Tatham's
 puzzle collection. The collection's web site is at
 <https://www.chiark.greenend.org.uk/~sgtatham/puzzles/>.
