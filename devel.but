@@ -1062,7 +1062,7 @@ divide mouse coordinates by it.)
 action whatsoever occurred in response to the input event; the puzzle
 was not interested in it at all.  The distinction between this is that
 \cw{MOVE_NO_EFFECT} implies that the state of the game is what makes
-the event uninteresting, while \cw{MOVE_NO_EFFECT} means that the
+the event uninteresting, while \cw{MOVE_UNUSED} means that the
 event is intrinsically uninteresting.  For example, a mouse click on
 an already-revealed square in Mines might return \cw{MOVE_NO_EFFECT}
 while a click outside the board would return \cw{MOVE_UNUSED}.
