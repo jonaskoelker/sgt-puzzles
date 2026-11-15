@@ -701,6 +701,7 @@ static const char *newgame_undo_deserialise_check(
     struct newgame_undo_deserialise_check_ctx *ctx =
         (struct newgame_undo_deserialise_check_ctx *)vctx;
     char *old, *new;
+    int different;
 
     /*
      * Undoing a New Game operation is only permitted if it doesn't
@@ -727,7 +728,10 @@ static const char *newgame_undo_deserialise_check(
 
     old = encode_params(me, me->params, true);
     new = encode_params(me, data->params, true);
-    if (strcmp(old, new)) {
+    different = strcmp(old, new);
+    sfree(old);
+    sfree(new);
+    if (different) {
         /* Set a flag to distinguish this deserialise failure
          * from one due to faulty decoding */
         ctx->refused = true;
@@ -736,7 +740,10 @@ static const char *newgame_undo_deserialise_check(
 
     old = encode_params(me, me->curparams, true);
     new = encode_params(me, data->cparams, true);
-    if (strcmp(old, new)) {
+    different = strcmp(old, new);
+    sfree(old);
+    sfree(new);
+    if (different) {
         ctx->refused = true;
         return "Undoing this new-game operation would change params";
     }
