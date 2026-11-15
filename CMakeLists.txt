@@ -80,6 +80,12 @@ puzzle(guess
   DESCRIPTION "Combination-guessing puzzle"
   OBJECTIVE "Guess the hidden combination of colours.")
 
+puzzle(hidoku
+  DISPLAYNAME "Hidoku"
+  DESCRIPTION "Number-path puzzle"
+  OBJECTIVE "Fill in 1 to n with successive numbers in adjacent squares.")
+solver(hidoku)
+
 puzzle(inertia
   DISPLAYNAME "Inertia"
   DESCRIPTION "Gem-collecting puzzle"

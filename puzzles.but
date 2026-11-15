@@ -3644,6 +3644,96 @@ These parameters are available from the \q{Custom...} option on the
 eliminate unnecessary clues on the board. This slows down generation,
 so it's not recommended for boards larger than, say, 30\times\.30.
 
+\C{hidoku} \i{Hidoku}
+
+\cfg{winhelp-topic}{games.hidoku}
+
+You are given a grid of squares which must be filled with the numbers
+from 1 to the size of the grid, such that each number x is adjacent to
+its successor x+1.
+
+You are given some of the numbers as clues; your aim is to place the
+rest of the numbers.
+
+You can read more about Hidoku on Wikipedia \k{wikipedia-hidoku}.
+
+Hidoku was contributed to this collection by Jonas K\u00F6{oe}lker.
+
+\B{wikipedia-hidoku} \W{https://en.wikipedia.org/wiki/Hidato}\cw{https://en.wikipedia.org/wiki/Hidato}
+
+\H{hidoku-controls} \I{controls, for Hidoku}Hidoku controls
+
+To play Hidoku, simply click the mouse in any empty square and type a
+number to fill that square.  If you make a mistake, click the square
+again and type the desired number; alternatively press backspace to
+clear the square (or use the Undo feature).
+
+If you realise your mistake in the middle of typing a number you can
+press backspace to delete a single digit, or escape to discard all
+digits.
+
+Instead of clicking you can use the arrow keys to move the cursor
+around the grid.
+
+Sometimes you want to input multiple numbers at once.  You can drag
+the mouse across multiple squares; releasing the mouse will place an
+increasing sequence of numbers in the visited squares.  Right-dragging
+will place a decreasing sequence of numbers.  Either way, the first
+non-empty square determines which numbers will be placed; they will be
+shown in the grid while the drag is underway.
+
+Pressing enter (or space) initiates a keyboard drag; visit squares
+with the arrow keys and press enter (or space) again to finish the
+drag.  Enter places an increasing sequence of numbers; space, a
+decreasing sequence.  Backspace undoes a single arrow key; escape
+cancels the whole drag.  If you press enter to start a drag but meant
+space, simply press space to flip the direction (and vice versa).
+Press space again to finish the drag.  You can use the numpad as
+8-directional arrow keys with both 2 and 5 acting as down-arrows.
+
+While doing a keyboard drag, holding down Ctrl will prevent you from
+dragging into a square that has already been dragged to.  If you were
+to do that the curve of dragged squares would be shortened.  Pressing
+shift-arrow will not extend the drag sequence; instead the current
+last square in the sequence will be replaced by whatever square you
+move into.
+
+If not dragging, pressing Ctrl + arrow key has the same effect as
+enter, arrow key, enter: it starts and completes a keyboard drag
+across two squares.  Pressing Shift + arrow key does a decreasing
+two-square drag.  Most likely you'll want to do these two-square drags
+when exactly one of the two squares has a number in it, in which case
+the two-square drag is really a way of adding a single number to the
+board by extending an existing formation.
+
+\H{hidoku-parameters} \I{parameters, for Hidoku}Hidoku parameters
+
+These parameters are available from the \q{Custom...} option on the
+\q{Type} menu.
+
+\dt \e{Width}, \e{Height}
+
+\dd Size of grid in squares.
+
+\dt \e{Variant}
+
+\dd How many neighbours each square has: 4 or 8.
+
+\dt \e{Clue symmetry}
+
+\dd Whether to force the given clues to be symmetric, and specifically
+how.  Symmetries are aesthetically pleasing; they also result in more
+clues being given, making the puzzle easier.  The two-fold symmetries
+all produce about the same number of additional clues in most cases;
+the four-fold symmetry gives even more clues.  (More symmetry also
+makes puzzle generation go faster.)
+
+\dt \e{Always give 1 and n as clues}
+
+\dd If enabled, the squares containing 1 and n (as well as their
+symmetric partners) are guaranteed to be given as clues.  If disabled
+it is up to chance whether 1 and n are given as clues.
+
 \A{licence} \I{MIT licence}\ii{Licence}
 
 This software is \i{copyright} 2004-2024 Simon Tatham.

@@ -1,0 +1,13 @@
+SAVEFILE:41:Simon Tatham's Portable Puzzle Collection
+VERSION :1:1
+GAME    :6:Hidoku
+PARAMS  :9:5x5e1s0c0
+CPARAMS :9:5x5e1s0c0
+SEED    :15:193601845998493
+DESC    :20:g14_21a8a18a24a17_3g
+NSTATES :1:5
+STATEPOS:1:5
+MOVE    :6:W4,4,1
+MOVE    :7:W4,0,22
+MOVE    :7:W4,1,23
+MOVE    :14:W3,0,13W2,0,12
