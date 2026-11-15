@@ -4756,7 +4756,7 @@ static char *interpret_move(const game_state *state, game_ui *ui,
                 anypencil = anypencil ||
                     state->pencil[(ui->hy*cr+ui->hx) * cr + i];
             if (!anypencil) {
-                /* ... expect to remove the cursor in mouse mode. */
+                /* ... except to remove the cursor in mouse mode. */
                 if (!ui->hcursor) {
                     ui->hshow = false;
                     return MOVE_UI_UPDATE;
