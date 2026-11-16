@@ -90,6 +90,7 @@ static const char *fuzz_one(bool (*readfn)(void *, void *, int), void *rctx,
     midend_size(me, &w, &h, false, 1);
     midend_redraw(me);
     midend_serialise(me, writefn, wctx);
+    sfree(midend_text_format(me));
     midend_free(me);
     return NULL;
 }
