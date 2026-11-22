@@ -449,8 +449,8 @@ accessible preset parameters for most games.
 
 The function is called with \c{i} equal to the index of the preset
 required (numbering from zero). It returns \cw{false} if that preset
-does not exist (if \c{i} is less than zero or greater than the
-largest preset index). Otherwise, it sets \c{*params} to point at a
+does not exist (if \c{i} is less than zero or greater than or equal to
+the largest preset index). Otherwise, it sets \c{*params} to point at a
 newly allocated \c{game_params} structure containing the preset
 information, sets \c{*name} to point at a newly allocated C string
 containing the preset title (to go on the \q{Type} menu), and
